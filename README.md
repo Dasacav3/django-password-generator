@@ -10,7 +10,8 @@ This project is a simple Django app that generates a random password for you.
 You can run the app by executing the following command:
 
 ```
-__python manage.py migrate__ and then __python manage.py runserver__
+python manage.py migrate 
+python manage.py runserver
 ```
 
 ### Using Docker
