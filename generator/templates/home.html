@@ -1,0 +1,47 @@
+{% extends 'layout.html' %} {% block title %} Password Generator {% endblock %} {% block content %}
+
+<div class="flex justify-center container m-auto">
+	<form
+		method="get"
+		action="{% url 'password' %}"
+		class="bg-green-400 p-10 rounded-xl shadow-xl border border-green-800"
+	>
+		<h1 class="font-bold text-3xl text-center my-3">Password Generator</h1>
+
+		<label for="length">Select the length of your password: </label> <br>
+		<select name="length" id="length" class="w-full">
+			<option value="8">8 characters</option>
+			<option value="10">10 characters</option>
+			<option value="12">12 characters</option>
+			<option value="14">14 characters</option>
+			<option value="16">16 characters</option>
+			<option value="20">20 characters</option>
+			<option value="24">24 characters</option>
+		</select>
+
+		<div class="mt-5">
+			<div>
+				<input type="checkbox" id="uppercase" name="uppercase" />
+				<label for="uppercase">Uppercase</label>
+			</div>
+
+			<div>
+				<input type="checkbox" id="special" name="special" />
+				<label for="special">Special characters</label>
+			</div>
+
+			<div>
+				<input type="checkbox" id="numbers" name="numbers" />
+				<label for="numbers">Numbers</label>
+			</div>
+		</div>
+
+		<div class="flex justify-center">
+			<button class="bg-green-700 mt-5 py-1 px-3 rounded-lg text-white shadow-xl">
+				Generate password
+			</button>
+		</div>
+	</form>
+</div>
+
+{% endblock %}
